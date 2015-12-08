@@ -38,6 +38,7 @@ Vagrant.configure(2) do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   config.vm.synced_folder "data", "/vagrant_data"
+  config.vm.synced_folder "../../workspace/src/github.com/mukulrawat18869", "/home/vagrant/gohome/src"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -48,9 +49,9 @@ Vagrant.configure(2) do |config|
     vb.gui = false
 
     # Customize the amount of memory on the VM:
-    vb.memory = 6024
+    vb.memory = 1024
     vb.name = "go_development"
-    vb.cpus = 2
+    # vb.cpus = 2
   end
   #
   # View the documentation for the provider you are using for more
